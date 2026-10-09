@@ -8,3 +8,5 @@ data/tmp/
 outputs/models/
 outputs/run.log
 .DS_Store
+
+REPORT.md
