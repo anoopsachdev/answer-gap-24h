@@ -1,0 +1,27 @@
+{
+  "train_end": "2015-04-08T14:14:07+00:00",
+  "val_end": "2016-01-28T09:48:24+00:00",
+  "tag_families": [
+    "javascript",
+    "java",
+    "c#",
+    "php",
+    "android",
+    "python",
+    "c++",
+    "ios",
+    "jquery",
+    "ruby-on-rails",
+    "html",
+    "sql",
+    "mysql",
+    "c",
+    "asp.net",
+    "other"
+  ],
+  "n_by_split_primary": {
+    "test": 188355,
+    "train": 878991,
+    "val": 188355
+  }
+}

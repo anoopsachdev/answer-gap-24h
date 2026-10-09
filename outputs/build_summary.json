@@ -1,0 +1,27 @@
+{
+  "n_questions_extracted": 1264216,
+  "n_answers_extracted": 2014516,
+  "n_tags_extracted": 3750906,
+  "n_questions_parsed": 1264216,
+  "n_answers_parsed": 2014516,
+  "n_tag_rows": 3750906,
+  "share_ids_multiple_of_10": 1.0,
+  "n_null_owner": 14454,
+  "created_min": "2008-08-01T13:57:07",
+  "created_max": "2016-10-19T23:57:31",
+  "n_saved_excluding_right_censored": 1263247,
+  "n_primary": 1255701,
+  "n_closed_fast_unanswered": 7546,
+  "answer_rate_24h_primary": 0.7244216577035457,
+  "n_with_code_primary": 850698,
+  "n_edit_marker_primary": 53826,
+  "n_null_owner_primary": 14395,
+  "notes": [
+    "CSVs were read with Python's csv module because DuckDB's parallel reader dropped most multiline answers.",
+    "Timestamps that matched none of the known formats were dropped.",
+    "Right-censored questions (posted in the last 24 hours of the dump) are excluded.",
+    "Self-answers are ignored when both owner ids are present and equal.",
+    "Closed within 24 hours with no other answer is excluded from the primary label.",
+    "Banned as features: score, answer count, answer score, closed date."
+  ]
+}

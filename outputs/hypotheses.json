@@ -1,0 +1,119 @@
+{
+  "window": "train",
+  "n_train_primary": 878991,
+  "practical_bar": 0.02,
+  "code_block": {
+    "rd": 0.03513697528023935,
+    "se": 0.0009859686991560595,
+    "ci95": [
+      0.03320451214000967,
+      0.03706943842046904
+    ],
+    "p_value": 3.7452683236573874e-278,
+    "strata": 125,
+    "rows": 878942,
+    "crude": {
+      "rd": 0.03643576923749203,
+      "se": 0.0009634364966785994,
+      "ci95": [
+        0.03454746840261053,
+        0.03832407007237353
+      ],
+      "p_value": 0.0,
+      "n_exposed": 575246,
+      "n_control": 303745,
+      "rate_exposed": 0.7791640446000494,
+      "rate_control": 0.7427282753625574,
+      "strata": 1,
+      "rows": 878991
+    },
+    "decision": "larger than the 2 point bar",
+    "holm_p": 1.1235804970972163e-277,
+    "hypothesis": "Code blocks have a higher 24-hour answer rate within tag family and year."
+  },
+  "weekend": {
+    "rd": 0.006002254168336358,
+    "se": 0.0011690891427427565,
+    "ci95": [
+      0.003710881553843749,
+      0.008293626782828967
+    ],
+    "p_value": 2.834540259913997e-07,
+    "strata": 119,
+    "rows": 878395,
+    "crude": {
+      "rd": 0.008576472877002361,
+      "se": 0.0011933039572707184,
+      "ci95": [
+        0.00623764009814263,
+        0.010915305655862092
+      ],
+      "p_value": 6.615027272914993e-13,
+      "n_exposed": 148643,
+      "n_control": 730348,
+      "rate_exposed": 0.773699400577222,
+      "rate_control": 0.7651229277002196,
+      "strata": 1,
+      "rows": 878991
+    },
+    "decision": "in the opposite direction",
+    "holm_p": 2.834540259913997e-07,
+    "simpson_gap": 0.002574218708666003,
+    "hypothesis": "Weekend posts have a lower 24-hour answer rate within tag family and year."
+  },
+  "title_length": {
+    "center_title_len": 51.09883263878697,
+    "linear_title_coef_per_100_chars": -0.7864939609096411,
+    "quadratic_coef": 0.5831852376643806,
+    "lr_stat": 201.5005933138309,
+    "df": 1,
+    "p_value": 9.825956011508852e-46,
+    "year_standardized_bin_rates": {
+      "1\u201320": 0.8280010444067473,
+      "21\u201340": 0.7958210394344017,
+      "41\u201360": 0.7663702102356204,
+      "61\u201380": 0.7369040418414474,
+      "81\u2013100": 0.7157550570297411,
+      "101+": 0.7031017140617327
+    },
+    "bin_rate_range": 0.12489933034501455,
+    "shape_matches_u": false,
+    "n": 878991,
+    "linear_llf": -468754.4278643445,
+    "quadratic_llf": -468653.6775676876,
+    "decision": "non-linear and the bin gap clears 2 points",
+    "holm_p": 1.9651912023017703e-45,
+    "hypothesis": "Title length is not linear: very short and very long titles both do worse."
+  },
+  "robustness_code_without_edit_markers": {
+    "rd": 0.03650301922384208,
+    "se": 0.0010057162399268386,
+    "ci95": [
+      0.03453185161491843,
+      0.03847418683276573
+    ],
+    "p_value": 1.9021081642167973e-288,
+    "strata": 125,
+    "rows": 839198,
+    "n_train": 839247,
+    "decision": "larger than the 2 point bar"
+  },
+  "sensitivity_code_closed_as_failure": {
+    "rd": 0.03589603628982952,
+    "se": 0.0009873873296435062,
+    "ci95": [
+      0.03396079268493707,
+      0.03783127989472197
+    ],
+    "p_value": 2.225648249608364e-289,
+    "strata": 125,
+    "rows": 881368,
+    "n_train": 881417,
+    "decision": "larger than the 2 point bar"
+  },
+  "holm": {
+    "code_block": 1.1235804970972163e-277,
+    "weekend": 2.834540259913997e-07,
+    "title_length": 1.9651912023017703e-45
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "decision": "In the largest tag families, randomize users to a composer that requires a code block or an explicit 'no code needed' before the question is posted.",
+  "unit_of_randomization": "user",
+  "why_not_question": "One person posts many questions, so question-level randomization is not independent.",
+  "tag_families": [
+    "javascript",
+    "java",
+    "c#",
+    "php",
+    "android"
+  ],
+  "primary_metric": "24-hour answer rate from someone other than the asker",
+  "baseline_answer_rate_test_window": 0.622272209801528,
+  "mde": 0.02,
+  "alpha": 0.05,
+  "power": 0.8,
+  "questions_per_arm_ignoring_clustering": 9120.557682241322,
+  "icc_train_window": {
+    "icc": 0.10016499117629847,
+    "clusters_with_2plus": 55760,
+    "questions_in_those_clusters": 193442,
+    "mean_cluster_size_unbalanced": 3.4691325420229093
+  },
+  "questions_per_user_per_14_days_in_sample": 1.0465277276988534,
+  "questions_per_user_per_14_days_scaled_to_full_site": 10.465277276988534,
+  "design_effect_used": 1.948089414930775,
+  "design_effect_if_run_on_the_sample_only": 1.004660449434409,
+  "questions_per_arm_with_design_effect": 17767.661879039882,
+  "daily_questions_in_sample": 275.5687706113398,
+  "daily_questions_scaled_to_full_site": 2755.687706113398,
+  "days_to_reach_sample_size": 12.895265192512882,
+  "recommended_duration_days": 14.0,
+  "novelty_floor_days": 14,
+  "guardrail": {
+    "metric": "questions successfully posted per randomized user",
+    "relative_drop_that_fails": 0.05,
+    "rule": "Do not ship the wizard if the treatment arm posts more than 5% fewer questions per user and the 95% interval for that drop excludes zero."
+  },
+  "assumptions": [
+    "The observational code-block gap is not the effect of forcing a code block. The experiment is what would estimate that effect.",
+    "Question ids in this file are a 10% sample, so live-site volume and questions per user are scaled by 10.",
+    "The ICC measured on the thinned sample is used, unchanged, at the scaled cluster size. That is a conservative planning choice if the true ICC is smaller.",
+    "Run at least 14 days even if the sample size arrives sooner, so a first-week novelty effect is not the result."
+  ]
+}
