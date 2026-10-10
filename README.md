@@ -1,14 +1,12 @@
 # Which developer questions go unanswered
 
-A data-science project aimed at a Microsoft Data Science Intern interview. The product is a developer Q&A marketplace, the same kind of attention market as Microsoft Q&A or GitHub Discussions. Expert time is limited. The decision is which new questions will still have no answer from someone else 24 hours later, and whether the ask wizard should require a code sample before those questions are posted.
+A data-science project about unanswered questions in developer Q&A communities. Expert time is limited, so the project predicts which new questions will still have no answer from someone else 24 hours later and examines whether requiring a code sample could improve answer rates.
 
 The data is the Kaggle set [StackSample: 10% of Stack Overflow Q&A](https://www.kaggle.com/datasets/stackoverflow/stacksample) (CC BY-SA). It is every question whose id is a multiple of 10, from August 2008 through October 2016, plus the answers and tags on those questions.
 
 ## Result in one paragraph
 
 On 1.26 million questions, 72.4% received an answer from someone else within 24 hours. That rate fell from 92% in 2008 to 59% in 2016. A code block is associated with a 3.5 percentage-point higher answer rate after holding tag family and year fixed (95% CI 3.3 to 3.7). Weekend posting is not a problem. Longer titles are answered less often, and the drop flattens rather than turning back up. For a queue that can touch 5% of new questions, a linear model on the title words puts truly unanswered questions in 69.5% of those slots on a later time window. A structural gradient-boosting model reaches 60.8%. A "no code and a rare tag" rule reaches 56.2%. The base rate is 40.9%.
-
-The interview write-up, including why each algorithm is on the list, is in [REPORT.md](REPORT.md).
 
 ## How to run
 
@@ -42,4 +40,3 @@ These choices are fixed in [src/config.py](src/config.py) and are not tuned on t
 | `src/hypotheses.py` | Stratified risk differences and the title-length test |
 | `src/models.py` | Baselines, logistic regression, random forest, boosting, title words |
 | `src/experiment.py` | Sample size for a user-randomized wizard test |
-| `REPORT.md` | The interview brief |
